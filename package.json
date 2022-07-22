@@ -1,17 +1,27 @@
 {
   "name": "openmediaserver",
   "version": "0.0.57",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "next": "next"
+  },
   "dependencies": {
-    "next": "12.1.3",
+    "next": "latest",
     "react": "^18",
     "react-dom": "^18",
     "react-is": "^17.0.2"
   },
   "devDependencies": {
-    "@types/react": "^18",
+    "@types/node": "^18.0.6",
+    "@types/react": "^18.0.15",
     "bun-framework-next": "^12",
-    "typescript": "latest",
-    "react-refresh": "0.10.0"
+    "eslint": "^8.20.0",
+    "eslint-config-next": "12.2.3",
+    "react-refresh": "0.10.0",
+    "typescript": "latest"
   },
   "module": "index.js"
 }
