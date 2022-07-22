@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Home({}) {
   return (
-    <div>
-      <p>Placeholder</p>
-    </div>
+    <>
+      <p className="text-zinc-700">Placeholder</p>
+    </>
   );
 }
