@@ -9,12 +9,14 @@
     "next": "next"
   },
   "dependencies": {
+    "hidefile": "^3.0.0",
     "next": "latest",
     "react": "^18",
     "react-dom": "^18",
     "react-is": "^17.0.2"
   },
   "devDependencies": {
+    "@types/hidefile": "^3.0.0",
     "@types/node": "^18.0.6",
     "@types/react": "^18.0.15",
     "autoprefixer": "^10.4.7",
