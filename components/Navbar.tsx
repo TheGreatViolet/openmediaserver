@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 interface navbarButtonProps {
@@ -7,13 +8,11 @@ interface navbarButtonProps {
 
 function NavbarButton(props: navbarButtonProps) {
   return (
-    <button className="text-storm-gray-50
-      transition-colors hover:text-jacksons-purple-300
-      contrast-more:hover:text-jacksons-purple-100" onClick={() => {
-        window.location.href = props.route;
-      }}>
-      {props.text}
-    </button>
+    <Link href={props.route}>
+      <a className="text-storm-gray-50
+        transition-colors hover:text-jacksons-purple-300
+        contrast-more:hover:text-jacksons-purple-100">{props.text}</a>
+    </Link>
   );
 }
 
@@ -24,9 +23,7 @@ export default function Navbar() {
         border-jacksons-purple-900 border-b-2">
         <div className="flex justify-between items-center h-full p-2">
           <div className="flex items-center">
-            <button>
-              <NavbarButton text="Home" route="/" />
-            </button>
+            <NavbarButton text="Home" route="/" />
           </div>
         </div>
       </div>
