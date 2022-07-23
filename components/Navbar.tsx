@@ -19,7 +19,7 @@ function NavbarButton(props: navbarButtonProps) {
 export default function Navbar() {
   return (
     <>
-      <div className="align-top w-full h-12 bg-jacksons-purple-800
+      <div className="flex-none align-top w-full h-12 bg-jacksons-purple-800
         border-jacksons-purple-900 border-b-2">
         <div className="flex justify-between items-center h-full p-2">
           <div className="flex items-center">
