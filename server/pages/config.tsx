@@ -1,13 +1,12 @@
-import Navbar from "components/Navbar";
-import { useEffect, useState } from "react";
-import { MediaServerConfig } from "types";
-import { IoMdAdd } from "react-icons/io";
+import Navbar from 'components/Navbar';
+import { useEffect, useState } from 'react';
+import { MediaServerConfig } from 'types';
 
-export function ConfigPage() {
+export default function Config() {
   const [config, setConfig] = useState<MediaServerConfig | null>(null);
 
   useEffect(() => {
-    const res = fetch("/api/config");
+    const res = fetch('/api/config');
 
     res.then((res) => {
       res.json().then((json) => {
@@ -37,12 +36,14 @@ export function ConfigPage() {
               Current directories:
             </p>
             <ul className="list-none bg-jacksons-purple-600 pl-2 w-56 rounded-md">
-              {config?.mediaLocations.map((location) => (
-                <li className="text-storm-gray-50 list-item">{location}</li>
+              {config?.mediaLocations.map((location, index) => (
+                <li key={index} className="text-storm-gray-50 list-item">
+                  {location}
+                </li>
               ))}
 
               {config?.mediaLocations.length === 0 ? (
-                <li className="text-storm-gray-50 list-item">
+                <li key={0} className="text-storm-gray-50 list-item">
                   No directories configured
                 </li>
               ) : null}
