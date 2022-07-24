@@ -39,3 +39,13 @@ export async function getConfig(): Promise<MediaServerConfig> {
     }
   }
 }
+
+export async function updateConfig(newConfig: MediaServerConfig): Promise<MediaServerConfig> {
+  const homeDir = homedir();
+
+  const configFile = path.join(homeDir, ".openmediaserver", "config.json");
+
+  fs.writeFileSync(configFile, JSON.stringify(newConfig, null, 2));
+
+  return newConfig;
+}
