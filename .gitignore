@@ -7,5 +7,6 @@
 **/dist
 **/build
 **/out
+**/target
 
 **/tsconfig.tsbuildinfo
