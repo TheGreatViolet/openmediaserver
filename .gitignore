@@ -1,2 +1,11 @@
+# Dependencies
 **/node_modules
+
+# Builds
 **/.turbo
+**/.next
+**/dist
+**/build
+**/out
+
+**/tsconfig.tsbuildinfo
